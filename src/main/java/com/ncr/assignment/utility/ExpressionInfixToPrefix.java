@@ -4,8 +4,16 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Stack;
 
+/**
+ * Converts infix expression to prefix expression
+ */
 public class ExpressionInfixToPrefix {
 
+    /**
+     * assigns precedence to the operators
+     * @param c
+     * @return
+     */
     static int precedence(String c) {
         switch (c) {
             case "+":
@@ -19,6 +27,12 @@ public class ExpressionInfixToPrefix {
     }
 
 
+    /**
+     * This method takes expression string and returns expression in String ArrayList
+     * @param expression
+     * @return expression in String ArrayList
+     * @throws Exception
+     */
     public static ArrayList<String> infixToPreFix(String expression) throws Exception {
 
         ArrayList<String> resultArr = new ArrayList<>();

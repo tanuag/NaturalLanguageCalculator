@@ -34,3 +34,4 @@
 -  seven over nine plus two
 -  four times five subtract six over one plus nine
 -  seven times eight minus nine
+-  ten divided-by two minus eight over four plus zero

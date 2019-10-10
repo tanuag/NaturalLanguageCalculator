@@ -2,6 +2,9 @@ package com.ncr.assignment.utility;
 
 import java.util.HashMap;
 
+/**
+ * text to digit and text to operator mapping
+ */
 public class TextToNumberOperatorConvertor {
 
     static HashMap<String, String> textnumberMap = new HashMap<>();

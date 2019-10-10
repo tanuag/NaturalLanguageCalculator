@@ -5,8 +5,15 @@ import java.util.Scanner;
 import static jdk.nashorn.internal.objects.Global.Infinity;
 
 
+/**
+ * Main class to run natural language calculator
+ */
 public class NaturalLangCalculator {
 
+    /**
+     * Main method to run the application
+     * @param args
+     */
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 

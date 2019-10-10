@@ -5,6 +5,9 @@ import java.util.ArrayList;
 
 import static jdk.nashorn.internal.objects.Global.Infinity;
 
+/**
+ * Expression Tree class to build and traverse tree
+ */
 public class ExpressionTree {
 
     /**
@@ -14,9 +17,11 @@ public class ExpressionTree {
         String data;
         TreeNode left, right;
 
+
         /**
          * constructor
-         **/
+         * @param data
+         */
         public TreeNode(String data) {
             this.data = data;
             this.left = null;
@@ -31,9 +36,11 @@ public class ExpressionTree {
         TreeNode treeNode;
         StackNode next;
 
+
         /**
          * constructor
-         **/
+         * @param treeNode
+         */
         public StackNode(TreeNode treeNode) {
             this.treeNode = treeNode;
             next = null;
@@ -42,9 +49,10 @@ public class ExpressionTree {
 
     private static StackNode top;
 
+
     /**
      * constructor
-     **/
+     */
     public ExpressionTree() {
         top = null;
     }
@@ -110,6 +118,7 @@ public class ExpressionTree {
 
     /**
      * function to check if digit
+     * @param String
      **/
     private boolean isDigit(String str) {
         try {
@@ -123,6 +132,7 @@ public class ExpressionTree {
 
     /**
      * function to check if operator
+     * @param String
      **/
     private boolean isOperator(String str) {
         return str.equalsIgnoreCase("+") || str.equalsIgnoreCase("-") || str.equalsIgnoreCase("*") || str.equalsIgnoreCase("/");
@@ -130,6 +140,7 @@ public class ExpressionTree {
 
     /**
      * function to convert character to digit
+     * @param String
      **/
     private int toDigit(String str) {
         return Integer.parseInt(str);
@@ -137,6 +148,7 @@ public class ExpressionTree {
 
     /**
      * function to build tree from input
+     * @param eqnList
      */
     public void buildTree(ArrayList<String> eqnList) {
         for (int i = eqnList.size() - 1; i >= 0; i--)
@@ -152,6 +164,7 @@ public class ExpressionTree {
 
     /**
      * function to evaluate tree
+     * @param ptr
      */
     public double evaluate(TreeNode ptr) {
         if (ptr.left == null && ptr.right == null)
@@ -183,14 +196,19 @@ public class ExpressionTree {
         }
     }
 
-    public double customRound(double myDouble, int numOfDigits) {
-        if (myDouble != Infinity) {
+    /**
+     * @param doubleNum
+     * @param numOfDigits
+     * @return doubleNum
+     */
+    public double customRound(double doubleNum, int numOfDigits) {
+        if (doubleNum != Infinity) {
             DecimalFormat df = new DecimalFormat();
             df.setMaximumFractionDigits(numOfDigits);
-            myDouble = Double.parseDouble(df.format(myDouble));
-            return myDouble;
+            doubleNum = Double.parseDouble(df.format(doubleNum));
+            return doubleNum;
         } else {
-            return myDouble;
+            return doubleNum;
         }
     }
 

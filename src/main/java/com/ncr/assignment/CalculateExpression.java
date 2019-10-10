@@ -7,8 +7,15 @@ import java.util.ArrayList;
 
 import static jdk.nashorn.internal.objects.Global.Infinity;
 
+/**
+ * Class used to call utility classes and returns result
+ */
 public class CalculateExpression {
 
+    /**
+     * @param expression
+     * @return result
+     */
     public static Double calculateExpression(String expression) {
         ArrayList<String> expressionInfix = new ArrayList<>();
 
