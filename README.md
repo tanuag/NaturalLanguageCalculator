@@ -15,6 +15,7 @@
 >-  mvn clean install surefire-report:report site -DgenerateReports=false
 
 >- To run through command line
+>-  mvn clean install
 >-  java -cp target/natural-language-calculator-1.0-SNAPSHOT.jar com.ncr.assignment.NaturalLangCalculator
 
 
