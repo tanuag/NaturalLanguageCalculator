@@ -7,4 +7,5 @@ target/
 .idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml
 .idea/modules.xml
 .idea/vcs.xml
+.idea/
 *.iml
