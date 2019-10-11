@@ -6,89 +6,108 @@ import org.junit.Test;
 public class TestCalculateExpression {
 
     @Test
-    public void testCalculateExpression(){
-        Double result = CalculateExpression.calculateExpression("one plus two");
-        Assert.assertTrue("testCalculateExpression success",3==result);
+    public void testCalculateExpression() {
+        String actualResult = CalculateExpression.calculateExpression("one plus two");
+        String expectedResult = "3";
+
+        Assert.assertEquals(expectedResult, actualResult);
 
     }
 
 
     @Test
-    public void testCalculateExpressionInvalidExpression(){
-        Double result = CalculateExpression.calculateExpression("one plus ttt");
-        Assert.assertTrue("testCalculateExpressionInvalidExpression success",-999999.9999==result);
+    public void testCalculateExpressionInvalidExpression() {
+        String actualResult = CalculateExpression.calculateExpression("one plus ttt");
+        String expectedResult = "Error - Invalid expression : 'ttt' is invalid value.";
+
+        Assert.assertEquals(expectedResult, actualResult);
 
     }
 
     @Test
-    public void testCalculateUpperCase(){
-        Double result = CalculateExpression.calculateExpression("ONE PLUS TWO");
-        Assert.assertTrue("testCalculateExpression success",3==result);
+    public void testCalculateUpperCase() {
+        String actualResult = CalculateExpression.calculateExpression("ONE PLUS TWO");
+        String expectedResult = "3";
+
+        Assert.assertEquals(expectedResult, actualResult);
     }
 
     @Test
-    public void testCalculateOperationChain(){
-        Double result = CalculateExpression.calculateExpression("four minus eight plus six times nine");
-        Assert.assertTrue("testCalculateExpression success",50==result);
+    public void testCalculateOperationChain() {
+        String actualResult = CalculateExpression.calculateExpression("four minus eight plus six times nine");
+        String expectedResult = "50";
+        Assert.assertEquals(expectedResult, actualResult);
     }
 
     @Test
-    public  void testCalculateTenPlusZero(){
-        Double result = CalculateExpression.calculateExpression("zero plus ten");
-        Assert.assertTrue("testCalculateExpression success",10==result);
+    public void testCalculateTenPlusZero() {
+        String actualResult = CalculateExpression.calculateExpression("zero plus ten");
+        String expectedResult = "10";
+        Assert.assertEquals(expectedResult, actualResult);
     }
 
     @Test
-    public  void testCalculateAdd(){
-        Double result = CalculateExpression.calculateExpression("three Add five");
-        Assert.assertTrue("testCalculateExpression success",8==result);
+    public void testCalculateAdd() {
+        String actualResult = CalculateExpression.calculateExpression("three Add five");
+        String expectedResult = "8";
+        Assert.assertEquals(expectedResult, actualResult);
     }
 
     @Test
-    public  void testCalculateplus(){
-        Double result = CalculateExpression.calculateExpression("nine plus five");
-        Assert.assertTrue("testCalculateExpression success",14==result);
+    public void testCalculateplus() {
+        String actualResult = CalculateExpression.calculateExpression("nine plus five");
+        String expectedResult = "14";
+        Assert.assertEquals(expectedResult, actualResult);
     }
 
     @Test
-    public  void testCalculateSubtract(){
-        Double result = CalculateExpression.calculateExpression("five subtract eight");
-        Assert.assertTrue("testCalculateExpression success",-3==result);
+    public void testCalculateSubtract() {
+        String actualResult = CalculateExpression.calculateExpression("five subtract eight");
+        String expectedResult = "-3";
+        Assert.assertEquals(expectedResult, actualResult);
     }
 
     @Test
-    public  void testCalculateMinus(){
-        Double result = CalculateExpression.calculateExpression("nine minus four");
-        Assert.assertTrue("testCalculateExpression success",5==result);
+    public void testCalculateMinus() {
+        String actualResult = CalculateExpression.calculateExpression("nine minus four");
+        String expectedResult = "5";
+        Assert.assertEquals(expectedResult, actualResult);
     }
 
     @Test
-    public  void testCalculateLess(){
-        Double result = CalculateExpression.calculateExpression("nine less four");
-        Assert.assertTrue("testCalculateExpression success",5==result);
+    public void testCalculateLess() {
+        String actualResult = CalculateExpression.calculateExpression("nine less four");
+        String expectedResult = "5";
+        Assert.assertEquals(expectedResult, actualResult);
     }
 
     @Test
-    public  void testCalculateMultipliedBy(){
-        Double result = CalculateExpression.calculateExpression("nine multiplied-by four");
-        Assert.assertTrue("testCalculateExpression success",36==result);
+    public void testCalculateMultipliedBy() {
+        String actualResult = CalculateExpression.calculateExpression("nine multiplied-by four");
+        String expectedResult = "36";
+        Assert.assertEquals(expectedResult, actualResult);
     }
 
     @Test
-    public  void testCalculateTimes(){
-        Double result = CalculateExpression.calculateExpression("nine times four");
-        Assert.assertTrue("testCalculateExpression success",36==result);
+    public void testCalculateTimes() {
+        String actualResult = CalculateExpression.calculateExpression("nine times four");
+        String expectedResult = "36";
+        Assert.assertEquals(expectedResult, actualResult);
     }
 
     @Test
-    public  void testCalculateDividedBy(){
-        Double result = CalculateExpression.calculateExpression("nine divided-by four");
-        Assert.assertTrue("testCalculateExpression success",2.25==result);
+    public void testCalculateDividedBy() {
+        String actualResult = CalculateExpression.calculateExpression("nine divided-by four");
+        String expectedResult = "2.25";
+        Assert.assertEquals(expectedResult, actualResult);
     }
 
     @Test
-    public  void testCalculateOver(){
-        Double result = CalculateExpression.calculateExpression("nine Over four");
-        Assert.assertTrue("testCalculateExpression success",2.25==result);
+    public void testCalculateOver() {
+        String actualResult = CalculateExpression.calculateExpression("nine Over four");
+
+        String expectedResult = "2.25";
+
+        Assert.assertEquals(expectedResult, actualResult);
     }
 }

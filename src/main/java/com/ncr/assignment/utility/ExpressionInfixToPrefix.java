@@ -46,7 +46,7 @@ public class ExpressionInfixToPrefix {
             if (TextToNumberOperatorConvertor.textnumberMap.containsKey(exprArray[i].toLowerCase()))
                 stringExp[i] = TextToNumberOperatorConvertor.textnumberMap.get(exprArray[i].toLowerCase());
             else
-                throw new Exception("'" + exprArray[i] + "' is invalid value.");
+                throw new Exception("Invalid expression : '" + exprArray[i] + "' is invalid value.");
         }
 
 
